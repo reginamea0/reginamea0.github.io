@@ -1,0 +1,84 @@
+:root {
+    --paper: #f2f0f5;
+    --ink: #221b2e;
+    --soft: #5d5470;
+    --accent: #6a2c91;
+    --rule: #cfc8da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1a1523;
+      --ink: #ece8f3;
+      --soft: #aaa0bd;
+      --accent: #c79df0;
+      --rule: #3a3149;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 112.5%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+  header { margin-bottom: 4rem; }
+  .kicker {
+    margin: 0 0 .25rem;
+    font-style: italic;
+    color: var(--soft);
+    font-size: 1.15rem;
+  }
+  h1 {
+    margin: 0;
+    font-family: "Bodoni Moda", "Didot", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(3.4rem, 15vw, 6rem);
+    line-height: .95;
+    letter-spacing: -.02em;
+    color: var(--accent);
+  }
+  h2 {
+    margin: 3.5rem 0 1rem;
+    font-family: "Bodoni Moda", "Didot", Georgia, serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+  }
+  p { margin: 0 0 1.1rem; }
+  .salam { font-size: 1.25rem; }
+  .meaning { font-style: italic; color: var(--soft); }
+  .sign {
+    margin-top: 3rem;
+    font-family: "Bodoni Moda", "Didot", Georgia, serif;
+    font-size: 1.4rem;
+    color: var(--accent);
+  }
+  .sign + p { color: var(--soft); font-style: italic; }
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    color: var(--soft);
+    font-size: .9rem;
+  }
+
+  nav { margin: 0 0 3rem; font-size: .95rem; display: flex; gap: 1.5rem; }
+  nav a, .back, .list a { color: var(--accent); text-underline-offset: .2em; }
+  nav a[aria-current] { color: var(--ink); text-decoration: none; }
+  .cat { margin: 0 0 .5rem; font-style: italic; color: var(--soft); }
+  .post h1 { font-size: clamp(2.2rem, 9vw, 3.6rem); line-height: 1.05; }
+  .list { list-style: none; margin: 0; padding: 0; }
+  .list li { margin: 0 0 .5rem; font-size: 1.15rem; }
+  .list-intro { color: var(--soft); font-style: italic; }
+  .more { margin-top: 3rem; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
